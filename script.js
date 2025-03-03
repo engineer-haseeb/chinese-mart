@@ -108,3 +108,37 @@ const firebaseConfig = {
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
+
+const db = firebase.firestore();
+
+// New product add karein
+db.collection("products").add({
+  name: "Smartphone",
+  image: "https://example.com/image.jpg",
+  price: 300,
+  stock: 50
+}).then(() => {
+  console.log("Product Added Successfully!");
+}).catch(error => {
+  console.error("Error adding product: ", error);
+});
+const db = firebase.firestore();
+
+// Order ka data
+const orderData = {
+  userId: "abc123",
+  items: [
+    { productId: "xyz789", quantity: 2 }
+  ],
+  total: 600,
+  status: "pending"
+};
+
+// Firestore me order save karein
+db.collection("orders").add(orderData)
+  .then(() => {
+    console.log("Order Placed Successfully!");
+  })
+  .catch(error => {
+    console.error("Error placing order: ", error);
+  });
