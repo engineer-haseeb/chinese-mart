@@ -1,24 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Poppins', sans-serif;
     text-align: center;
-    background-color: #f8f9fa;
+    background-color: #f0f0f5;
     color: #333;
+    margin: 0;
+    padding: 0;
 }
 
 header {
-    background-color: #ff4d4d;
+    background: linear-gradient(90deg, #ff416c, #ff4b2b);
     color: white;
     padding: 20px;
+    font-size: 1.8em;
+    font-weight: bold;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-section {
+.products {
+    padding: 40px 20px;
+}
+
+.product-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.product {
+    background: white;
     padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    width: 250px;
+    transition: transform 0.3s ease-in-out;
+    text-align: center;
+}
+
+.product:hover {
+    transform: translateY(-5px);
+}
+
+.product img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.add-to-cart {
+    background: linear-gradient(90deg, #ff416c, #ff4b2b);
+    color: white;
+    border: none;
+    padding: 12px;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+.add-to-cart:hover {
+    background: linear-gradient(90deg, #ff4b2b, #ff416c);
+}
+
+.cart {
+    margin-top: 30px;
+    padding: 20px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    display: inline-block;
+    width: 50%;
+}
+
+#cart-items {
+    list-style-type: none;
+    padding: 0;
+}
+
+#cart-items li {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
 }
 
 footer {
-    background-color: #222;
+    background: #222;
     color: white;
-    padding: 10px;
-    margin-top: 20px;
+    padding: 15px;
+    font-size: 1em;
+    margin-top: 30px;
 }
