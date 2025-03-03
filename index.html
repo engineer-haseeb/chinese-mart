@@ -12,13 +12,26 @@
         <p>您的中国产品一站式商店！ Your one-stop shop for Chinese products!</p>
     </header>
 
-    <section>
+    <section id="products">
         <h2>Our Products</h2>
-        <p>Check out the best imported products from China.</p>
+        <div class="product-list">
+            <!-- Products will be dynamically added here using JavaScript -->
+        </div>
+    </section>
+
+    <section id="cart">
+        <h2>Shopping Cart</h2>
+        <ul id="cart-items"></ul>
+        <button id="checkout-btn">Checkout</button>
     </section>
 
     <footer>
         <p>&copy; 2025 Chinese Mart. All rights reserved.</p>
     </footer>
+
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-database.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
