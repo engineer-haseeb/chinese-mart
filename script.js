@@ -86,3 +86,25 @@ document.getElementById("checkout-btn").addEventListener("click", () => {
 
 // Initial Call
 displayProducts();
+
+// Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+const firebaseConfig = {
+  apiKey: "AIzaSyBFXrrB_nSwplw6dilpbmzSuhcYGfC-vC8",
+  authDomain: "chinese-mart.firebaseapp.com",
+  projectId: "chinese-mart",
+  storageBucket: "chinese-mart.firebasestorage.app",
+  messagingSenderId: "78393991073",
+  appId: "1:78393991073:web:4e913086874da72fd275e0",
+  measurementId: "G-3J1YDGBTZF"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
