@@ -7,31 +7,18 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>欢迎来到中华商城 ( Welcome to Chinese Mart )</h1>
-        <p>您的中国产品一站式商店！ Your one-stop shop for Chinese products!</p>
-    </header>
 
-    <section id="products">
-        <h2>Our Products</h2>
-        <div class="product-list">
-            <!-- Products will be dynamically added here using JavaScript -->
-        </div>
-    </section>
+    <h1>Welcome to Chinese Mart</h1>
 
-    <section id="cart">
-        <h2>Shopping Cart</h2>
-        <ul id="cart-items"></ul>
-        <button id="checkout-btn">Checkout</button>
-    </section>
+    <h2>Available Products</h2>
+    <div id="products-list"></div>
 
-    <footer>
-        <p>&copy; 2025 Chinese Mart. All rights reserved.</p>
-    </footer>
+    <h2>Shopping Cart</h2>
+    <div id="cart"></div>
+    <button onclick="checkout()">Checkout</button>
 
-    <!-- Firebase SDK -->
-    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-database.js"></script>
-    <script src="script.js"></script>
+    <!-- Firebase aur Custom JavaScript Include -->
+    <script type="module" src="script.js"></script>
+
 </body>
 </html>
